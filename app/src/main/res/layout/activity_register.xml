@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
+    android:background="#F5F5F5"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="24dp"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <!-- Форма регистрации -->
+        <LinearLayout
+            android:layout_width="450dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="32dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Регистрация"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp"
+                android:textColor="#333333" />
+
+            <!-- Поле ФИО -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ФИО:"
+                android:textSize="14sp"
+                android:textColor="#666666" />
+
+            <EditText
+                android:id="@+id/fullNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Иванов Иван Иванович"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:drawable/editbox_background" />
+
+            <!-- Поле Email -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                android:textSize="14sp"
+                android:textColor="#666666" />
+
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="example@mail.com"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:drawable/editbox_background" />
+
+            <!-- Поле Пароль -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пароль:"
+                android:textSize="14sp"
+                android:textColor="#666666" />
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Минимум 5 символов, с буквами"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:drawable/editbox_background" />
+
+            <!-- Поле Подтверждение пароля -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Повторите пароль:"
+                android:textSize="14sp"
+                android:textColor="#666666" />
+
+            <EditText
+                android:id="@+id/confirmPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="••••••••"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:drawable/editbox_background" />
+
+            <!-- Поле Email учителя -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email учителя (опционально):"
+                android:textSize="14sp"
+                android:textColor="#666666" />
+
+            <EditText
+                android:id="@+id/teacherEmailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Оставьте пустым если неизвестно"
+                android:padding="12dp"
+                android:layout_marginBottom="24dp"
+                android:background="@android:drawable/editbox_background" />
+
+            <!-- Индикатор загрузки -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone" />
+
+            <!-- Кнопка Зарегистрироваться -->
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Зарегистрироваться"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:backgroundTint="#4CAF50" />
+
+            <!-- Ссылка на вход -->
+            <TextView
+                android:id="@+id/loginTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Уже есть аккаунт? Войти"
+                android:textSize="14sp"
+                android:textColor="#2196F3"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

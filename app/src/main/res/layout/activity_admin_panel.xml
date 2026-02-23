@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F5F5F5">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Администрирование"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#333333" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выход"
+            android:backgroundTint="#F44336" />
+
+    </LinearLayout>
+
+    <!-- Индикатор загрузки -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone" />
+
+    <!-- Таблица пользователей -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:elevation="4dp">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/usersTableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:padding="16dp">
+
+                <!-- Заголовок таблицы -->
+                <TableRow
+                    android:background="#FF9800"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:text="ID"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:padding="8dp"
+                        android:minWidth="60dp" />
+
+                    <TextView
+                        android:text="Email"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:padding="8dp"
+                        android:minWidth="180dp" />
+
+                    <TextView
+                        android:text="ФИО"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:padding="8dp"
+                        android:minWidth="180dp" />
+
+                    <TextView
+                        android:text="Роль"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:padding="8dp"
+                        android:minWidth="100dp" />
+
+                    <TextView
+                        android:text="Email учителя"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:padding="8dp"
+                        android:minWidth="160dp" />
+
+                    <TextView
+                        android:text="Действия"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:padding="8dp"
+                        android:minWidth="160dp" />
+
+                </TableRow>
+
+
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+</LinearLayout>
